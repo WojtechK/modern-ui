@@ -1,41 +1,101 @@
 import React from 'react';
+import styled from 'styled-components';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { Button } from '../components';
+import { Trash, Book } from '../assets/icons';
 
-import { Button } from './Button';
-
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Example/Button',
+  title: 'Components/Button',
   component: Button,
-  // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
 } as ComponentMeta<typeof Button>;
 
-// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
+const ButtonWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+`;
 
-export const Primary = Template.bind({});
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
-Primary.args = {
-  primary: true,
-  label: 'Button',
+const Template: ComponentStory<typeof Button> = (args) => (
+  <ButtonWrapper>
+    <Button {...args} onClick={(e) => console.log(e)}> button </Button>
+  </ButtonWrapper>
+);
+
+export const Default = Template.bind({});
+Default.args = {};
+
+export const TextVariant = Template.bind({});
+TextVariant.args = {
+  variant: 'text',
 };
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-  label: 'Button',
+export const OutlineVariant = Template.bind({});
+OutlineVariant.args = {
+  variant: 'outline',
 };
 
-export const Large = Template.bind({});
-Large.args = {
-  size: 'large',
-  label: 'Button',
+export const Rounded = Template.bind({});
+Rounded.args = {
+  isRounded: true,
 };
 
-export const Small = Template.bind({});
-Small.args = {
+export const FullWidth = Template.bind({});
+FullWidth.args = {
+  isFullWidth: true,
+};
+
+export const SmallSize = Template.bind({});
+SmallSize.args = {
   size: 'small',
-  label: 'Button',
+};
+
+export const LargeSize = Template.bind({});
+LargeSize.args = {
+  size: 'large',
+};
+
+export const PrimaryColor = Template.bind({});
+PrimaryColor.args = {
+  color: 'primary',
+};
+
+export const SecondaryColor = Template.bind({});
+SecondaryColor.args = {
+  color: 'secondary',
+};
+
+export const SuccessColor = Template.bind({});
+SuccessColor.args = {
+  color: 'success',
+};
+
+export const ErrorColor = Template.bind({});
+ErrorColor.args = {
+  color: 'error',
+};
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  disabled: true,
+};
+
+export const PrefixIcon = Template.bind({});
+PrefixIcon.args = {
+  prefixIcon: <Book/>,
+};
+
+export const SuffixIcon = Template.bind({});
+SuffixIcon.args = {
+  suffixIcon: <Trash/>,
+};
+
+export const IconButton = Template.bind({});
+IconButton.args = {
+  iconButton: <Trash size={24}/>,
+};
+
+export const Loading = Template.bind({});
+Loading.args = {
+  isLoading: true,
 };

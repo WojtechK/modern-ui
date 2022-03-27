@@ -8,6 +8,7 @@ const packageJson = require("./package.json");
 
 export default [
   {
+    preserveModules: true,
     input: "src/index.ts",
     output: [
       {
@@ -25,7 +26,11 @@ export default [
       resolve(),
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
-      postcss(),
+      postcss({
+        extract: false,
+        modules: true,
+        use: ['sass'],
+      }),
     ],
   },
   {

@@ -6,4 +6,9 @@ export const parameters = {
       date: /Date$/,
     },
   },
-}
+  layout: "fullscreen",
+  viewMode: "docs",
+  previewTabs: {
+    canvas: { hidden: true },
+  },
+};

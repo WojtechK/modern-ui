@@ -1,0 +1,135 @@
+@import '../../styles/globals.scss';
+@import '../../styles/variables.scss';
+
+.button {
+  min-width: 60px;
+  height: 35px;
+  box-sizing: border-box;
+  font-weight: 500;
+  background-size: 100% 100%;
+  background-image: $default-gradient;
+  color: $light;
+  padding: 4px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  transition: all .3s ease-out;
+  text-transform: uppercase;
+  box-shadow: .5px 1px 2px $grey-light;
+  border-radius: 4px;
+  display: flex;
+
+  span {
+    padding: 0 8px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-size: 150% 100%;
+    background-position: 100% 0;
+  }
+
+  &:disabled {
+    pointer-events: none;
+    color: $grey-light;
+    background: $grey-dark;
+    &:hover {
+      color: $grey-light;
+      cursor: default;
+      background: $grey-dark;
+    }
+    &:active {
+      transform: none;
+    }
+  }
+
+  &:active {
+    transform: translateY(8px);
+  }
+
+  &-primary {
+    background: $primary;
+    color: $light;
+    &:hover {
+      background-color: $primary-dark;
+    }
+  }
+
+  &-secondary {
+    background: $secondary;
+    color: $dark;
+    &:hover {
+      background-color: $secondary-dark;
+    }
+  }
+
+  &-small {
+    height: 30px;
+    font-size: 12px;
+
+  }
+
+  &-large {
+    height: 40px;
+    font-size: 16px;
+  }
+
+  &-error {
+    background: $error;
+    &:hover {
+      background-color: rgba($error, 0.9);
+    }
+  }
+
+  &-success {
+    background: $success;
+    &:hover {
+      background-color: rgba($success, 0.9);
+    }
+  }
+
+  &-rounded {
+    border-radius: 20px;
+  }
+
+  &-fullWidth {
+    width: 100%;
+  }
+
+  &-text {
+    border: none;
+    background: #fff;
+    box-shadow: none;
+    color: $dark;
+    &:hover {
+      background-color: rgba($dark, 0.1);
+    }
+  }
+
+  &-outline {
+    background: unset;
+    color: $dark;
+    border: .5px solid $dark;
+    &:hover {
+      background-color: rgba($dark, 0.1);
+    }
+  }
+
+  &-icon {
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    color: $primary;
+  }
+
+  &-loading {
+    pointer-events: none;
+    &:hover {
+      cursor: default;
+    }
+    &:active {
+      transform: none;
+    }
+  }
+}
