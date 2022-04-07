@@ -3,9 +3,9 @@ import cn from "classnames";
 import styles from "./Button.module.scss";
 import { Loader } from "../index";
 
-type btnVariant = "text" | "outline";
-type btnColor = "primary" | "secondary" | "error" | "success";
-type btnSize = "small" | "large";
+type btnVariant = "fill" | "text" | "outline";
+type btnColor = "default" | "primary" | "secondary" | "error" | "success";
+type btnSize = "small" | "medium" | "large";
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: btnVariant;
@@ -14,7 +14,6 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   children: JSX.Element | string;
   isRounded?: boolean;
   isFullWidth?: boolean;
-  linkUrl?: string;
   classNames?: string;
   prefixIcon?: JSX.Element | React.FunctionComponent;
   suffixIcon?: JSX.Element | React.FunctionComponent;
@@ -27,7 +26,6 @@ export const Button: React.FC<ButtonProps> = ({
   color,
   size,
   children,
-  linkUrl,
   classNames,
   isRounded,
   isFullWidth,
@@ -39,9 +37,9 @@ export const Button: React.FC<ButtonProps> = ({
 }) => {
   const classes = cn(
     styles.button,
-    styles[`button-${color}`],
-    styles[`button-${size}`],
-    styles[`button-${variant}`],
+    color && styles[`button-${color}`],
+    size && styles[`button-${size}`],
+    variant && styles[`button-${variant}`],
     isRounded && styles["button-rounded"],
     isFullWidth && styles["button-fullWidth"],
     iconButton && styles["button-icon"],

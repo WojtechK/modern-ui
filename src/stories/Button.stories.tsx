@@ -7,6 +7,61 @@ import { Trash, Book } from '../assets/icons';
 export default {
   title: 'Components/Button',
   component: Button,
+  argTypes: {
+    variant: { 
+      control: "select",
+      defaultValue: "fill",
+      options: ["fill", "text", "outline"],
+      table: {
+        defaultValue: { summary: "fill" },
+      },
+      description: 'base variant of button styling',
+    },
+    color: { 
+      control: "select",
+      options: ["primary", "secondary", "error", "success", "default"],
+      table: {
+        defaultValue: { summary: "default" },
+      },
+      description: 'colors available on fill variant'
+    },
+    size: { 
+      control: "select",
+      defaultValue: "medium",
+      options: ["small", "medium", "large"],
+      table: {
+        defaultValue: { summary: "medium" },
+      },
+      description: 'sizes of the button and font'
+    },
+    isRounded: { 
+      control: "boolean",
+      description: 'styles button with rounded corners',
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: false },
+      },
+      defaultValue: false,
+    },
+    isLoading: { 
+      control: "boolean",
+      description: 'indicates loading state and disable clicks',
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: false },
+      },
+      defaultValue: false,
+    },
+    disabled: { 
+      control: "boolean",
+      description: 'applying disabled styles and attribute',
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: false },
+      },
+      defaultValue: false,
+    },
+  }
 } as ComponentMeta<typeof Button>;
 
 const ButtonWrapper = styled.div`
