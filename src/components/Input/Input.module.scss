@@ -1,0 +1,77 @@
+@import "../../styles/globals.scss";
+@import "../../styles/variables.scss";
+
+.input {
+  height: 48px;
+  min-width: 168px;
+  padding: 12px 12px;
+  box-sizing: border-box;
+  margin: auto;
+
+  &:disabled {
+    pointer-events: none;
+  }
+
+  &::placeholder {
+    color: $grey-dark;
+  }
+}
+
+.outline {
+  border: 1px solid $dark;
+  border-radius: 4px;
+
+  &:hover {
+    border: 1.5px solid $dark;
+    outline: none;
+  }
+
+  &:focus {
+    border: $primary-light 2px solid;
+    outline: none;
+  }
+}
+
+.clean {
+  border: none;
+  border-bottom: 1px solid $dark;
+  border-radius: 0;
+
+  &:hover {
+    border-bottom: 1.5px solid $dark;
+    outline: none;
+  }
+
+  &:focus {
+    border-bottom: $primary-light 2px solid;
+    outline: none;
+  }
+}
+
+.error {
+  border: 1.5px solid $error;
+
+  &:hover {
+    border: 2px solid $error;
+  }
+
+  &:focus {
+    border: 2px solid $error;
+  }
+}
+
+.cleanError {
+  border: none;
+  border-bottom: 1.5px solid $error;
+  border-radius: 0;
+
+  &:hover {
+    border-bottom: 2px solid $error;
+    outline: none;
+  }
+
+  &:focus {
+    border-bottom: 2px solid $error;
+    outline: none;
+  }
+}

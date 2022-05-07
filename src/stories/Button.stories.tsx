@@ -73,7 +73,7 @@ const ButtonWrapper = styled.div`
 
 const Template: ComponentStory<typeof Button> = (args) => (
   <ButtonWrapper>
-    <Button {...args} onClick={(e) => console.log(e)}> button </Button>
+    <Button {...args}> button </Button>
   </ButtonWrapper>
 );
 
