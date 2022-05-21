@@ -43,6 +43,15 @@ export default {
         },
         defaultValue: false,
     },
+    isFullWidth: {
+      control: "boolean",
+      description: "setting input component on full width relative to parent container",
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: false },
+      },
+      defaultValue: false,
+  },
     label: {
         control: "text",
         description: "label of the form control is form group is enabled",
@@ -119,7 +128,16 @@ export const WithErrorMessage = Template.bind({});
 WithErrorMessage.args = {
   value: "input",
   name: "input",
-  message: "This password don't meet requirements",
+  message: "This password doesn't meet requirements",
   isFormGroup: true,
   hasError: true,
+};
+
+export const WithFullWidth = Template.bind({});
+WithFullWidth.args = {
+  value: "input",
+  name: "input",
+  isFormGroup: true,
+  isFullWidth: true,
+  label: 'Label',
 };

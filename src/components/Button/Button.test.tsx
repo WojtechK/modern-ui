@@ -30,7 +30,7 @@ describe("Button", () => {
     expect(container.querySelector('svg')).toBeTruthy;
   });
 
-  test.only("should be disabled", () => {
+  test("should be disabled", () => {
     const onClickHandler = jest.fn();
     const { debug, container } = render(<Button disabled={true} onClick={onClickHandler}> Button </Button>);
     debug();

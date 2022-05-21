@@ -6,7 +6,7 @@
   min-width: 168px;
   padding: 12px 12px;
   box-sizing: border-box;
-  margin: auto;
+  width: 200px;
 
   &:disabled {
     pointer-events: none;
@@ -74,4 +74,8 @@
     border-bottom: 2px solid $error;
     outline: none;
   }
+}
+
+.fullWidth {
+  width: 100%;
 }

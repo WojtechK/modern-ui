@@ -6,16 +6,13 @@ import { FormItem, FormItemProps } from "../FormItem/FormItem";
 export type InputVariant = "outline" | "clean";
 
 export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement>, FormItemProps {
-  isFormGroup: boolean;
-  variant: InputVariant;
+  isFormGroup?: boolean;
+  variant?: InputVariant;
   value: string;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onKeyUp?: (event: React.KeyboardEvent) => void;
-  // TO HANDLE
- // TO HANDLE
-   // TO HANDLE
- // TO HANDLE
   isFullWidth?: boolean;
+  hasError?: boolean;
 }
 
 export const Input: React.FC<InputProps> = ({
@@ -27,6 +24,7 @@ export const Input: React.FC<InputProps> = ({
   onKeyUp,
   hasError,
   required,
+  isFullWidth,
   ...props
 }) => {
   const inputClasses = cn(
@@ -35,6 +33,7 @@ export const Input: React.FC<InputProps> = ({
     variant === "clean" && styles.clean,
     hasError && variant === 'outline' && styles.error,
     hasError && variant === 'clean' && styles.cleanError,
+    isFullWidth && styles.fullWidth,
   );
 
   const baseInput = (
@@ -53,7 +52,7 @@ export const Input: React.FC<InputProps> = ({
   return (
     <>
       {isFormGroup ? (
-        <FormItem hasError={hasError} required={required} {...props}>
+        <FormItem hasError={hasError} required={required} isFullWidth={isFullWidth} {...props}>
           {baseInput}
         </FormItem>
       ) : (
