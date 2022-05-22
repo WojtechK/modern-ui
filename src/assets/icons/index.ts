@@ -1,2 +1,2 @@
-export { Book } from './Book';
-export { Trash } from './Trash';
+export { Book } from "./Book";
+export { Trash } from "./Trash";

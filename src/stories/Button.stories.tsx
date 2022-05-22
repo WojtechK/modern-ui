@@ -1,74 +1,74 @@
-import React from 'react';
-import styled from 'styled-components';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { Button } from '../components';
-import { Trash, Book } from '../assets/icons';
+import React from "react";
+import styled from "styled-components";
+import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { Button } from "../components";
+import { Trash, Book } from "../assets/icons";
 
 export default {
-  title: 'Components/Button',
+  title: "Components/Button",
   component: Button,
   argTypes: {
-    variant: { 
+    variant: {
       control: "select",
       defaultValue: "fill",
       options: ["fill", "text", "outline"],
       table: {
         defaultValue: { summary: "fill" },
       },
-      description: 'base variant of button styling',
+      description: "base variant of button styling",
     },
-    color: { 
+    color: {
       control: "select",
       options: ["primary", "secondary", "error", "success", "default"],
       table: {
         defaultValue: { summary: "default" },
       },
-      description: 'colors available on fill variant'
+      description: "colors available on fill variant",
     },
-    size: { 
+    size: {
       control: "select",
       defaultValue: "medium",
       options: ["small", "medium", "large"],
       table: {
         defaultValue: { summary: "medium" },
       },
-      description: 'sizes of the button and font'
+      description: "sizes of the button and font",
     },
-    isRounded: { 
+    isRounded: {
       control: "boolean",
-      description: 'styles button with rounded corners',
+      description: "styles button with rounded corners",
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: false },
       },
       defaultValue: false,
     },
-    isLoading: { 
+    isLoading: {
       control: "boolean",
-      description: 'indicates loading state and disable clicks',
+      description: "indicates loading state and disable clicks",
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: false },
       },
       defaultValue: false,
     },
-    disabled: { 
+    disabled: {
       control: "boolean",
-      description: 'applying disabled styles and attribute',
+      description: "applying disabled styles and attribute",
       table: {
         type: { summary: "boolean" },
         defaultValue: { summary: false },
       },
       defaultValue: false,
     },
-  }
+  },
 } as ComponentMeta<typeof Button>;
 
 const ButtonWrapper = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 `;
 
 const Template: ComponentStory<typeof Button> = (args) => (
@@ -82,12 +82,12 @@ Default.args = {};
 
 export const TextVariant = Template.bind({});
 TextVariant.args = {
-  variant: 'text',
+  variant: "text",
 };
 
 export const OutlineVariant = Template.bind({});
 OutlineVariant.args = {
-  variant: 'outline',
+  variant: "outline",
 };
 
 export const Rounded = Template.bind({});
@@ -102,32 +102,32 @@ FullWidth.args = {
 
 export const SmallSize = Template.bind({});
 SmallSize.args = {
-  size: 'small',
+  size: "small",
 };
 
 export const LargeSize = Template.bind({});
 LargeSize.args = {
-  size: 'large',
+  size: "large",
 };
 
 export const PrimaryColor = Template.bind({});
 PrimaryColor.args = {
-  color: 'primary',
+  color: "primary",
 };
 
 export const SecondaryColor = Template.bind({});
 SecondaryColor.args = {
-  color: 'secondary',
+  color: "secondary",
 };
 
 export const SuccessColor = Template.bind({});
 SuccessColor.args = {
-  color: 'success',
+  color: "success",
 };
 
 export const ErrorColor = Template.bind({});
 ErrorColor.args = {
-  color: 'error',
+  color: "error",
 };
 
 export const Disabled = Template.bind({});
@@ -137,17 +137,17 @@ Disabled.args = {
 
 export const PrefixIcon = Template.bind({});
 PrefixIcon.args = {
-  prefixIcon: <Book/>,
+  prefixIcon: <Book />,
 };
 
 export const SuffixIcon = Template.bind({});
 SuffixIcon.args = {
-  suffixIcon: <Trash/>,
+  suffixIcon: <Trash />,
 };
 
 export const IconButton = Template.bind({});
 IconButton.args = {
-  iconButton: <Trash size={24}/>,
+  iconButton: <Trash size={24} />,
 };
 
 export const Loading = Template.bind({});

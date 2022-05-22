@@ -35,13 +35,13 @@ export default {
       defaultValue: false,
     },
     required: {
-        control: "boolean",
-        description: "indicates if input control is reqired",
-        table: {
-          type: { summary: "boolean" },
-          defaultValue: { summary: false },
-        },
-        defaultValue: false,
+      control: "boolean",
+      description: "indicates if input control is reqired",
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: false },
+      },
+      defaultValue: false,
     },
     isFullWidth: {
       control: "boolean",
@@ -51,13 +51,13 @@ export default {
         defaultValue: { summary: false },
       },
       defaultValue: false,
-  },
+    },
     label: {
-        control: "text",
-        description: "label of the form control is form group is enabled",
-        table: {
-          type: { summary: "text" },
-        },
+      control: "text",
+      description: "label of the form control is form group is enabled",
+      table: {
+        type: { summary: "text" },
+      },
     },
     message: {
       control: "text",
@@ -139,5 +139,5 @@ WithFullWidth.args = {
   name: "input",
   isFormGroup: true,
   isFullWidth: true,
-  label: 'Label',
+  label: "Label",
 };

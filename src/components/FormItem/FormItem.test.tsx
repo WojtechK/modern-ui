@@ -20,7 +20,7 @@ describe("Form Item", () => {
         <Input isFormGroup onChange={() => {}} value="" />
       </FormItem>
     );
-    expect(container.querySelector('label')).toBeTruthy();
+    expect(container.querySelector("label")).toBeTruthy();
   });
 
   test("should render error message", () => {
@@ -29,6 +29,6 @@ describe("Form Item", () => {
         <Input isFormGroup onChange={() => {}} value="" />
       </FormItem>
     );
-    expect(container.querySelector("p")?.classList.contains('errorMessage')).toBe(true);
+    expect(container.querySelector("p")?.classList.contains("errorMessage")).toBe(true);
   });
 });

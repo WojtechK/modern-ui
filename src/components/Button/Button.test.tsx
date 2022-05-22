@@ -8,42 +8,54 @@ describe("Button", () => {
   test("should render default button", () => {
     const { debug, container } = render(<Button> Button </Button>);
     debug();
-    expect(container.firstElementChild?.classList.contains('button')).toBe(true);
+    expect(container.firstElementChild?.classList.contains("button")).toBe(true);
   });
 
   test("should render primary color button", () => {
     const { debug, container } = render(<Button color="primary"> Button </Button>);
     debug();
-    expect(container.firstElementChild?.classList.contains('button-primary')).toBe(true);
+    expect(container.firstElementChild?.classList.contains("button-primary")).toBe(true);
   });
 
   test("should render large rounded button", () => {
-    const { debug, container } = render(<Button size="large" isRounded> Button </Button>);
+    const { debug, container } = render(
+      <Button size="large" isRounded>
+        Button
+      </Button>
+    );
     debug();
-    expect(container.firstElementChild?.classList.contains('button-large')).toBe(true);
-    expect(container.firstElementChild?.classList.contains('button-rounded')).toBe(true);
+    expect(container.firstElementChild?.classList.contains("button-large")).toBe(true);
+    expect(container.firstElementChild?.classList.contains("button-rounded")).toBe(true);
   });
 
   test("should render icon button", () => {
-    const { debug, container } = render(<Button iconButton={<Trash size={24}/>}> </Button>);
+    const { debug, container } = render(<Button iconButton={<Trash size={24} />}> </Button>);
     debug();
-    expect(container.querySelector('svg')).toBeTruthy;
+    expect(container.querySelector("svg")).toBeTruthy;
   });
 
   test("should be disabled", () => {
     const onClickHandler = jest.fn();
-    const { debug, container } = render(<Button disabled={true} onClick={onClickHandler}> Button </Button>);
+    const { debug, container } = render(
+      <Button disabled={true} onClick={onClickHandler}>
+        Button
+      </Button>
+    );
     debug();
-    expect(container.querySelector('button')).toHaveAttribute('disabled');
+    expect(container.querySelector("button")).toHaveAttribute("disabled");
     fireEvent.click(container);
     expect(onClickHandler).toBeCalledTimes(0);
   });
 
   test("should have proper class and be not clickable while loading", () => {
     const onClickHandler = jest.fn();
-    const { debug, container } = render(<Button isLoading onClick={onClickHandler}> Button </Button>);
+    const { debug, container } = render(
+      <Button isLoading onClick={onClickHandler}>
+        Button
+      </Button>
+    );
     debug();
-    expect(container.firstElementChild?.classList.contains('button-loading')).toBe(true);
+    expect(container.firstElementChild?.classList.contains("button-loading")).toBe(true);
     fireEvent.click(container);
     expect(onClickHandler).toBeCalledTimes(0);
   });

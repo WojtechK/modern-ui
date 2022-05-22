@@ -31,9 +31,9 @@ export const Input: React.FC<InputProps> = ({
     styles.input,
     variant === "outline" && styles.outline,
     variant === "clean" && styles.clean,
-    hasError && variant === 'outline' && styles.error,
-    hasError && variant === 'clean' && styles.cleanError,
-    isFullWidth && styles.fullWidth,
+    hasError && variant === "outline" && styles.error,
+    hasError && variant === "clean" && styles.cleanError,
+    isFullWidth && styles.fullWidth
   );
 
   const baseInput = (

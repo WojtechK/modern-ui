@@ -1,5 +1,5 @@
-@import '../../styles/globals.scss';
-@import '../../styles/variables.scss';
+@import "../../styles/globals.scss";
+@import "../../styles/variables.scss";
 
 .button {
   min-width: 60px;
@@ -14,9 +14,9 @@
   justify-content: center;
   align-items: center;
   border: none;
-  transition: all .3s ease-out;
+  transition: all 0.3s ease-out;
   text-transform: uppercase;
-  box-shadow: .5px 1px 2px $grey-light;
+  box-shadow: 0.5px 1px 2px $grey-light;
   border-radius: 4px;
   display: flex;
 
@@ -126,7 +126,7 @@
   &-outline {
     background: unset;
     color: $dark;
-    border: .5px solid $dark;
+    border: 0.5px solid $dark;
     &:hover {
       background-color: rgba($dark, 0.1);
     }

@@ -10,7 +10,8 @@
     "test": "jest",
     "storybook": "start-storybook -p 6006",
     "storybook-builder": "start-storybook -p 6006 --builder webpack5",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "prettier": "npx prettier --write ."
   },
   "author": "YOUR_NAME",
   "license": "ISC",

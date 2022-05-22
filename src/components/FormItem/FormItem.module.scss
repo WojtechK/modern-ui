@@ -2,25 +2,25 @@
 @import "../../styles/variables.scss";
 
 .container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    label {
-        margin-bottom: 8px;
-        font-size: 16px;
-        outline: none;
-    }
+  label {
+    margin-bottom: 8px;
+    font-size: 16px;
+    outline: none;
+  }
 
-    p {
-        font-size: 12px;
-    }
+  p {
+    font-size: 12px;
+  }
 }
 
 .errorMessage {
-    color: $error;
-    font-size: 12px;
+  color: $error;
+  font-size: 12px;
 }
 
 .fullWidth {
-    width: 100%;
+  width: 100%;
 }
