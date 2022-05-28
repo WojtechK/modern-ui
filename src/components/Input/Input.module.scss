@@ -22,12 +22,12 @@
   border-radius: 4px;
 
   &:hover {
-    border: 1.5px solid $dark;
+    border: 2px solid $dark;
     outline: none;
   }
 
   &:focus {
-    border: $primary-light 2px solid;
+    border: $primary 2px solid;
     outline: none;
   }
 }
@@ -38,12 +38,12 @@
   border-radius: 0;
 
   &:hover {
-    border-bottom: 1.5px solid $dark;
+    border-bottom: 2px solid $dark;
     outline: none;
   }
 
   &:focus {
-    border-bottom: $primary-light 2px solid;
+    border-bottom: $primary 2px solid;
     outline: none;
   }
 }

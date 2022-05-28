@@ -1,0 +1,76 @@
+@import "../../styles/globals.scss";
+@import "../../styles/variables.scss";
+
+$check: polygon(20% 50%, 44% 74%, 80% 35%, 68% 27%, 43% 56%, 31% 43%);
+
+.checkbox {
+  input[type="checkbox"] {
+    appearance: none;
+    margin: 0;
+    height: 22px;
+    width: 22px;
+    border: 1px solid $dark;
+    border-radius: 2px;
+    cursor: pointer;
+    transform: translateY(-0.075em);
+    transition: 300ms transform ease-in-out;
+    box-shadow: inset 1em 1em var($light);
+    display: grid;
+    place-content: center;
+
+    &:disabled {
+      pointer-events: none;
+    }
+
+    &:checked {
+      background-color: $dark;
+    }
+
+    &:hover {
+      border: 2px solid $dark;
+    }
+
+    &::before {
+      content: "";
+      width: 20px;
+      height: 20px;
+      transform: scale(0);
+      transition: 120ms transform ease-in-out;
+      background-color: $light;
+      transform-origin: bottom left;
+      clip-path: $check;
+    }
+
+    &:checked::before {
+      transform: scale(1);
+    }
+  }
+
+  &-primary {
+    input[type="checkbox"]:checked {
+      background-color: $primary;
+    }
+  }
+
+  &-secondary {
+    input[type="checkbox"]:checked {
+      background-color: $secondary;
+    }
+  }
+
+  &-success {
+    input[type="checkbox"]:checked {
+      background-color: $success;
+    }
+  }
+
+  &-error {
+    input[type="checkbox"]:checked {
+      background-color: $error;
+    }
+  }
+
+  input[type="checkbox"]:disabled {
+    background-color: $grey-dark;
+  }
+}

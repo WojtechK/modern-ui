@@ -5,7 +5,7 @@ import { Button } from "../components";
 import { Trash, Book } from "../assets/icons";
 
 export default {
-  title: "Components/Button",
+  title: "Base/Button",
   component: Button,
   argTypes: {
     variant: {

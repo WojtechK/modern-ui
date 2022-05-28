@@ -2,9 +2,10 @@ import React from "react";
 import cn from "classnames";
 import styles from "./Button.module.scss";
 import { Loader } from "../index";
+import { Color } from "../interfaces";
 
 type btnVariant = "fill" | "text" | "outline";
-type btnColor = "default" | "primary" | "secondary" | "error" | "success";
+type btnColor = Color;
 type btnSize = "small" | "medium" | "large";
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {

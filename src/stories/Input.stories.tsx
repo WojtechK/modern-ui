@@ -4,7 +4,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { Input } from "../components";
 
 export default {
-  title: "Components/Input",
+  title: "Form/Input",
   component: Input,
   argTypes: {
     variant: {
@@ -54,7 +54,7 @@ export default {
     },
     label: {
       control: "text",
-      description: "label of the form control is form group is enabled",
+      description: "label of the form control if form group is enabled",
       table: {
         type: { summary: "text" },
       },
@@ -140,4 +140,13 @@ WithFullWidth.args = {
   isFormGroup: true,
   isFullWidth: true,
   label: "Label",
+};
+
+export const WithLabelLeft = Template.bind({});
+WithLabelLeft.args = {
+  value: "input",
+  name: "input",
+  isFormGroup: true,
+  label: "Label",
+  labelPlacement: "left",
 };
