@@ -25,6 +25,7 @@ export const Input: React.FC<InputProps> = ({
   hasError,
   required,
   isFullWidth,
+  className,
   ...props
 }) => {
   const inputClasses = cn(
@@ -33,7 +34,8 @@ export const Input: React.FC<InputProps> = ({
     variant === "clean" && styles.clean,
     hasError && variant === "outline" && styles.error,
     hasError && variant === "clean" && styles.cleanError,
-    isFullWidth && styles.fullWidth
+    isFullWidth && styles.fullWidth,
+    className,
   );
 
   const baseInput = (

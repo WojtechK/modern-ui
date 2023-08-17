@@ -42,7 +42,7 @@ const CheckboxWrapper = styled.div`
 `;
 
 const Template: ComponentStory<typeof Checkbox> = (args) => {
-  const [checked, setChecked] = useState(args.checked ?? false);
+  const [checked, setChecked] = useState(args.checked ?? true);
 
   return (
     <CheckboxWrapper>

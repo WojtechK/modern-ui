@@ -12,7 +12,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   variant?: btnVariant;
   color?: btnColor;
   size?: btnSize;
-  children: JSX.Element | string;
+  children: React.ReactNode;
   isRounded?: boolean;
   isFullWidth?: boolean;
   classNames?: string;
@@ -57,7 +57,7 @@ export const Button: React.FC<ButtonProps> = ({
           {iconButton ?? (
             <>
               {prefixIcon}
-              <span>{children}</span>
+              {children}
               {suffixIcon}
             </>
           )}

@@ -1,0 +1,39 @@
+@import '../../styles/variables.scss';
+
+
+.selectWrapper {
+    display: flex;
+    position: relative;
+    .select {
+        position: relative;
+        .caretIcon {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            bottom: 50%;
+            transform: translateY(-6px);
+            margin-right: 4px;
+        }
+
+        .selectInput {
+            padding-right: 20px;
+        }
+    }
+    
+    .optionsContainer {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        z-index: 999;
+        background-color: $light;
+        border: .5px solid $grey-dark;
+        .option {
+            height: 24px;
+        }
+
+    }
+
+}
+
+
